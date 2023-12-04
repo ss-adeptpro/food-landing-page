@@ -1,0 +1,19 @@
+@tailwind utilities;
+
+@layer utilities {
+  .btn-padding {
+    @apply p-5 py-1.5;
+  }
+
+  .container-margin-bottom {
+    @apply mb-5;
+  }
+
+  .move-horizontal-5 {
+    left: 5%;
+  }
+
+  .move-horizontal-10 {
+    left: 10%;
+  }
+}

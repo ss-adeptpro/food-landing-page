@@ -1,0 +1,154 @@
+@tailwind components;
+
+@layer components {
+  
+  .navContainer {
+    @apply flex justify-between items-center;
+    @apply container-margin-bottom;
+  }
+
+  .navLeft {
+    @apply flex justify-between items-center space-x-4
+  }
+
+  .navLogo {
+    /* @apply flex justify-between items-center space-x-1; */
+    @apply text-2xl sm:text-3xl lg:text-4xl px-2;
+  }
+
+  .navToggle {
+    @apply hidden md:block bg-fGray-200 rounded-full p-1
+  }
+
+  .navToggle button {
+    @apply rounded-full p-2
+  }
+  
+  .navToggle .buttonSelected {
+    @apply text-white bg-black;
+    /* @apply btn-padding; */
+  }
+
+  .navMiddle {
+    @apply hidden md:flex
+  }  
+
+  .btnCls {
+    @apply text-white focus:outline-none font-medium rounded-full text-sm;
+  }
+
+  .btn-black {
+    /* @apply bg-black hover:bg-red-400  focus:bg-red-400 px-4 py-1.5; */
+    @apply hover:bg-fOrange-400  focus:bg-fOrange-400 text-white flex justify-center items-center rounded-full bg-black btn-padding;
+  }
+
+  .btn-Cart {
+    /* @apply text-white flex justify-center items-center rounded-full */
+    @apply btn-black;
+  }
+
+  .btn-search {
+    @apply absolute right-2.5 bottom-[7px];
+  }
+
+  .inptSearch {
+    @apply block w-full p-3 pl-10 bg-fGray-200 text-sm border border-gray-300 rounded-full focus:ring-black focus:border-black;
+    @apply sm:w-[200px] md:w-[260px] lg:w-[400px]
+  }  
+
+  /* Header Gallery */
+  .header-gallery {
+    @apply flex container-margin-bottom w-full xsm:h-[200px] sm:h-[300px] md:h-[500px] relative;
+    
+    /* accessed thru postcss-asset plugin */
+    background: inline("./../../assets/header-gallery-burger.jpeg");
+    @apply bg-no-repeat bg-center;
+    background-size: 100%;
+  }
+
+  .header-gllery-text {
+    @apply flex flex-col text-white max-w-[500px] text-2xl sm:text-3xl lg:text-6xl md:text-5xl font-bold absolute gap-2;
+    @apply top-1/2 -translate-y-1/2;
+    @apply move-horizontal-5;
+  }
+
+  .header-gllery-text span {
+    @apply capitalize inline-block;
+  }
+  
+  /* Food Gallery */
+  .food-gallery {
+    @apply flex flex-col w-full relative container-margin-bottom justify-center items-center gap-5;
+  }
+
+  .container-heading {
+    @apply text-2xl sm:text-3xl lg:text-4xl px-2 text-fOrange-400 capitalize font-bold;
+  }
+
+  .food-filter {
+    @apply flex justify-between items-center w-full flex-wrap;
+  }
+
+  .food-text {
+    @apply text-xl font-bold py-1 capitalize inline-block
+  }
+
+  .filter-buttons {
+    @apply flex flex-wrap gap-3;
+  }
+  
+  .btn-white {
+    @apply hover:bg-fOrange-400 text-fOrange-400 hover:text-white flex justify-center items-center border rounded-full border-fOrange-400 btn-padding capitalize;
+  }
+
+  .btn-orange {
+    @apply bg-fOrange-400 text-white border rounded-full border-fOrange-400 btn-padding capitalize font-normal;
+  }
+
+  .food-items {
+    @apply flex md:justify-between xsm:justify-center w-full flex-wrap gap-2 box-border;
+  }
+
+  .food-item {
+    @apply cursor-pointer relative flex flex-col xl:w-[24%] md:w-[32%] sm:w-[48%] xsm:w-full shadow-lg rounded-lg border border-s-veryLightGray container-margin-bottom;
+    @apply hover:scale-105 duration-300;
+  }
+
+  .food-item img {
+    @apply w-full h-[200px] object-cover rounded-t-lg;
+  }
+
+  .food-details {
+    @apply flex justify-between items-center px-2 py-4 font-bold;
+  }
+
+  .loadingSpinner {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    z-index: -1;
+  }
+
+  .hamburger {
+    @apply cursor-pointer
+  }
+
+  .navLeftMobileOpen {
+    @apply fixed z-40 min-h-screen top-0 left-0 flex flex-col justify-between xsm:w-[200px] sm:w-[300px] md:w-[500px] bg-white shadow-lg border border-s-veryLightGray;
+    @apply transition-all duration-500;
+  }
+
+  .navLeftMobileClose {
+    @apply fixed z-40 min-h-screen top-0 left-[-100%] flex flex-col justify-between xsm:w-[200px] sm:w-[300px] md:w-[500px] bg-white shadow-lg border border-s-veryLightGray;
+    @apply transition-all duration-500;
+  }
+
+  .navOverlay {
+    @apply fixed bg-black/80 w-full h-screen z-10 top-0 left-0;
+  }
+
+  .navOverlayClose {
+    @apply fixed bg-black/80 w-full h-screen z-10 top-0 left-[-100%]
+  }
+
+}
