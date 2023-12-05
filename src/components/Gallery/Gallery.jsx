@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HearderGallery = () => {
+const Gallery = () => {
   return (
     <div className='header-gallery'>
       <div className="header-gllery-text">
@@ -16,4 +16,4 @@ const HearderGallery = () => {
   );
 }
 
-export default HearderGallery;
+export default Gallery;
