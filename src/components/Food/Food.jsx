@@ -5,7 +5,6 @@ import FoodItem from './FoodItem';
 const Food = () => {
   
   const [foods, setFoods] = useState(data);
-  const [counter, setCounter] = useState(0);
 
   const filterByCategory = (foodCategory) => {
     setFoods(
@@ -22,15 +21,11 @@ const Food = () => {
       })
     )
   }
-
-  const incrementCounter = () => {
-    setCounter(counter+1)
-  }
+  
 
   return (
     <div className='food-gallery'>
       <div className='container-heading'>Top Rated Menu Items</div>
-      {/* <div className='container-heading'><button onClick={incrementCounter}> Increment Counter</button></div> */}
       <div className='food-filter'>
           <div className='flex flex-col'>
               <span className='food-text'>Filter type</span>
@@ -57,8 +52,7 @@ const Food = () => {
         <div className='food-items'>
           {
             foods.map((food, index) => (
-                // <FoodItem key={index} foodImage={food.image} foodName={food.name} foodPrice={food.price}></FoodItem>
-                <FoodItem key={index} food={food} faltuProp="testing"></FoodItem>
+                <FoodItem key={index} food={food}></FoodItem>
               )
             )
           }

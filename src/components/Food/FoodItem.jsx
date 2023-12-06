@@ -1,5 +1,4 @@
 import React, { memo, useState } from 'react';
-// import ImageComponent from '../ImageComponent/ImageComponent';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import LoadingImage from '../LoadingImage/LoadingImage';
@@ -12,8 +11,6 @@ import {
 } from "tw-elements";
 
 initTE({ Animate });
-
-// import { Blurhash } from "react-blurhash";
 
 //memoized component
 //It will re-render only if we change the passed arguments.
